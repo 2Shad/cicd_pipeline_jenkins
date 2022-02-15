@@ -2,17 +2,17 @@
 ## Jenkins
 ### Webhooks with Git-hub
 #### Automated Testing using Jenkins
-#### Automated Deployment on AWS EC2 for 2Tier architecture - Nodejs app and Mongodb  
+#### Automated Deployment on AWS EC2 for 2Tier architecture - Nodejs app and Mongodb
 - test 1
 
 - Jenkins Workflow
-  
+
 ![](images/jenkins.png)
 
-  ##### Contiounus Integration Continuous Delivery/Deployment 
+  ##### Contiounus Integration Continuous Delivery/Deployment
 ![](images/CICD.png)
 
-###### Let's break it down 
+###### Let's break it down
   ![](images/cicd_jenkins.png)
 
 ### For deployment job in Jenkins
@@ -20,7 +20,7 @@
 
 ```
 # we need to by pass the key asking stage with below command:
-ssh -A -o "StrictHostKeyChecking=no" ubuntu@ec2-ip << EOF	
+ssh -A -o "StrictHostKeyChecking=no" ubuntu@ec2-ip << EOF
 # copy the the code
 # run your provision.sh to install node with required dependencies for app instance - same goes for db instance (ensure to double check if node and db are actively running)
 
@@ -31,7 +31,7 @@ ssh -A -o "StrictHostKeyChecking=no" ubuntu@ec2-ip << EOF
 nohup node app.js > /dev/null 2>&1 & - use this command to run node app in the background
 
 # To debug ssh into your ec2 and run the above commands
-    
+
 
 EOF
 ```
@@ -56,8 +56,9 @@ EOF
 4. Merge Results
 5. change made on dev brance
 
---- 
+---
 Tigger deployment job if the merge was successfull
 - Testing webhook in bootcamp test3
 - testing 1
 - testing 2
+- testing 3
